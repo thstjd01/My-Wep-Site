@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head><title>목표&amp;시간표</title>
+<link href="cssfile.css" type="text/css" rel="stylesheet">
+<style>
+tbody tr:hover{background: cyan}
+table{border-collapse: collapse;border:2px solid black; }
+</style>
+</head>
+
+<body>
+  <nav id="menu">
+  <ul class="myMenu">
+      <li>&lt;HOME&gt;
+        <ul class="submenu">
+          <li><a href="home.html" target="_self">&lt;HOME&gt;</a></li>
+        </ul>
+      </li>
+      <li style="color:violet"><span id="span">본문 본문 본문 본문 </span>
+          <ul class="submenu">
+              <li><a href="목표&시간표.html" target="_self">&lt;학기목표&amp;수업 시간표&gt;</a></li>
+              <li><a href="과목소개.html" target="_self">&lt;수강 과목 소개&gt;</a></li>
+              <li><a href="학습활동.html" target="_self">&lt;나의 슬기로운 자가 학습활동 소개&gt;</a></li>
+              <li><a href="기타활동.html" target="_self">&lt;기타 활동 소개&gt;</a></li>
+          </ul>
+      </li>
+      <li>&lt;맺는말&gt;
+          <ul class="submenu">
+              <li><a href="소감.html" target="_self">&lt;소감&gt;</a></li>
+              <li><a href="배운점.html" target="_self">&lt;배운점&gt;</a></li>
+          </ul>
+      </li>
+      <li>&lt;기능&gt;
+        <ul class="submenu">
+            <li><a href="계산기.html" target="_self">&lt;계산기&gt;</a></li>
+            <li><a href="그림판.html" target="_self">&lt;그림판&gt;</a></li>
+            <li><a href="겜블링.html" target="_self">&lt;겜블링&gt;</a></li>
+        </ul>
+      </li>
+  </ul>
+</nav>
+
+  <header>
+    <h1><span>본문</span></h1>
+  </header>
+
+   <section>
+
+    <article>
+     <h2 class="droptext">&lt;학기목표&gt;</h2>
+     <p style="margin-left:28%;text-indent:0em">
+    <ul id="licolor" style="margin-left:35%;margin-right:35%;list-style-type:circle">
+     <li><b>첫번째 목표:</b> 지난 학기 학점보다 0.1 이상 올리기</li>
+     <li><b>두번째 목표:</b> 2학기에 틈틈이 공부해서 자격증 따기</li>
+     <li><b>세번째 목표:</b> 복습 철저히, 벼락치기 하지 않게 꾸준히 복습</li>
+     <li><b>네번째 목표:</b> 규칙적인 생활하기</li>
+   </ul>
+     </p>
+    </article>
+
+    <article>
+    <h2 class="droptext">&lt;수업 시간표&gt;</h2>
+    <table border="1" style="margin-left:28%">
+     <thead>
+      <tr><th></th><th><b>월</b></th><th><b>화</b></th><th><b>수</b></th><th><b>목</b></th><th><b>금</b></th></tr>
+     </thead>
+     <tbody>
+      <tr><td><time><b>09:00~10:00</b></time></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td><time><b>10:00~11:00</b></time></td><td></td><td><b>인권과 평화</b></td><td></td><td></td><td><b>과학기술과 에콜로지</b></td></tr>
+      <tr><td><time><b>11:00~12:00</b></time></td><td></td><td><b>인권과 평화</b></td><td></td><td><b>비아메디아 채플</b><br><b>노래로 경험하는 종교</b></td><td><b>과학기술과 에콜로지</b></td></tr>
+      <tr><td><time><b>12:00~13:00</b></time></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td><time><b>13:00~14:00</b></time></td><td></td><td><b>Python 프로그래밍</b></td><td></td><td><b>Python 프로그래밍</b></td><td><b>대학생활 세미나2</b></td></tr>
+      <tr><td><time><b>14:00~15:00</b></time></td><td></td><td><b>Python 프로그래밍</b></td><td></td><td><b>Python 프로그래밍</b></td><td><b>대학생활 세미나2</b></td></tr>
+      <tr><td><time><b>15:00~16:00</b></time></td><td></td><td><b>웹 개발 입문</b></td><td></td><td><b>웹 개발 입문</b></td><td><b>교양중국어 초급</b></td></tr>
+      <tr><td><time><b>16:00~17:00</b></time></td><td></td><td><b>웹 개발 입문(15:00~16:15)</b><br><b>평화와 통일(16:30~17:45)</b></td><td></td><td><b>웹 개발 입문(15:00~16:15)</b><br><b>평화와 통일(16:30~17:45)</b></td><td><b>교양중국어 초급</b></td></tr>
+      <tr><td><time><b>17:00~18:00</b></time></td><td></td><td><b>평화와 통일</b></td><td></td><td><b>평화와 통일</b></td><td><b>교양중국어 초급</b></td></tr>
+     </tbody>
+    </table>
+    </article>
+
+  </section>
+  <script>
+  var span = document.getElementById("span");
+  var timerID = setInterval("doRotate()", 200);
+
+  function doRotate() {
+    var str = span.innerHTML;
+    var firstChar = str.substr(0, 1);
+    var remains = str.substr(1, str.length-1);
+    str = remains + firstChar;
+    span.innerHTML = str;
+  }
+  </script>
+</body>
+</html>

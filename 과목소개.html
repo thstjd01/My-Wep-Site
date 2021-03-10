@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head><title>수강과목</title>
+ <style>
+ #menu ul{ list-style-type: none; margin:0; padding:0;background: black; }
+ ul.myMenu > li {display:inline-block;color: white;text-align: center;padding: 7px 10px;position: relative;width:350px;margin-left: 3px;border:1px solid #86E57F;}
+ ul.myMenu > li:hover{color:violet}
+ ul.myMenu > li a:hover {color: violet}
+ ul.myMenu > li ul.submenu { display:none; position:absolute; top:36px; left:0px }
+ ul.myMenu > li:hover ul.submenu { display:block; }
+ ul.myMenu > li ul.submenu > li { display:inline-block; width:350px; padding:5px 10px; background:black;color:white;text-align:center;border:1px solid #86E57F}
+ ul.myMenu > li ul.submenu > li a{color:white}
+ ul.myMenu > li ul.submenu > li a:hover { color: violet }
+
+ html,body{margin: 0;padding: 0;height: 100%;background:lightsteelblue;}
+ header{width: 100%;background: mediumslateblue;color:lightcyan;float: left;}
+ h1{text-align: center;font-weight: normal;animation-name: textCA;}
+ h2{font-weight:normal;color:aquamarine;text-align: center;}
+ h3{text-align: center;}
+ p{font-family:Consolas;margin-left: 2em;text-indent:0px;}
+ @keyframes textCA { 0%{color:lightcyan} 30%{color:palevioletred } 100%{color:black}}
+ h1>span{ animation-name: textCA; animation-duration: 5s;animation-iteration-count: infinite;}
+ .blurtext{text-shadow: 5px 5px 10px mediumblue;}
+ .droptext{ text-shadow: 2px 2px black}
+ #licolor li:hover{background:cyan}
+ ul li a{text-decoration: none;}
+ </style>
+</head>
+
+<body>
+  <nav id="menu">
+  <ul class="myMenu">
+      <li>&lt;HOME&gt;
+        <ul class="submenu">
+          <li><a href="home.html" target="_self">&lt;HOME&gt;</a></li>
+        </ul>
+      </li>
+      <li style="color:violet"><span id="span">본문 본문 본문 본문 </span>
+          <ul class="submenu">
+              <li><a href="목표&시간표.html" target="_self">&lt;학기목표&amp;수업 시간표&gt;</a></li>
+              <li><a href="과목소개.html" target="_self">&lt;수강 과목 소개&gt;</a></li>
+              <li><a href="학습활동.html" target="_self">&lt;나의 슬기로운 자가 학습활동 소개&gt;</a></li>
+              <li><a href="기타활동.html" target="_self">&lt;기타 활동 소개&gt;</a></li>
+          </ul>
+      </li>
+      <li>&lt;맺는말&gt;
+          <ul class="submenu">
+              <li><a href="소감.html" target="_self">&lt;소감&gt;</a></li>
+              <li><a href="배운점.html" target="_self">&lt;배운점&gt;</a></li>
+          </ul>
+      </li>
+      <li>&lt;기능&gt;
+        <ul class="submenu">
+            <li><a href="계산기.html" target="_self">&lt;계산기&gt;</a></li>
+            <li><a href="그림판.html" target="_self">&lt;그림판&gt;</a></li>
+            <li><a href="겜블링.html" target="_self">&lt;겜블링&gt;</a></li>
+        </ul>
+      </li>
+  </ul>
+</nav>
+
+
+  <header>
+    <h1><span>본문</span></h1>
+  </header>
+
+  <section>
+    <article>
+     <h2 class="droptext">&lt;수강 과목 소개&gt;</h2>
+     <ul id="licolor" style="margin-left:43%;margin-right:43%;">
+       <li><a href="#인평">인권과 평화</a></li>
+       <li><a href="#파이썬">Python 프로그래밍</a></li>
+       <li><a href="#웹">웹 개발 입문</a></li>
+       <li><a href="#평통">평화와 통일</a></li>
+       <li><a href="#노경">노래로 경험하는 종교</a></li>
+       <li><a href="#과에">과학기술과 에콜로지</a></li>
+       <li><a href="#대세">대학생활 세미나2</a></li>
+       <li><a href="#교초">교양중국어 초급</a></li>
+     </ul>
+     <hr>
+     <dl>
+      <h2 id="인평"><dt class="blurtext">인권과 평화</dt></h2>
+      <dd>
+        <b>&lt;개요&gt;</b><br>본 과목은 성공회 대학교의 인권과 평화를 가르치기 위해 특별히 마련된 교양과목입니다.<br>
+        학내의 인권평화 관련 전임교수들이 강의하며, 학생들에게 성적 부담을 주지 않고 공부에 전념할 수 있게 하기 위해 절대평가제로 운영합니다.
+      </dd>
+     </dl>
+     <div style="margin-left:40px">
+      <b>&lt;교재 정보&gt;</b><br>
+      없음
+     <br><br>
+      <b>&lt;기타 과목 정보&gt;</b>
+     <ul>
+      <li><b>이수구분:</b> 교양필수</li>
+      <li><b>담당교수:</b> 조경희 교수님</li>
+     </ul>
+   </div><br>
+<hr>
+     <dl>
+      <h2 id="파이썬"><dt class="blurtext">Python 프로그래밍</dt></h2>
+      <dd>
+        <b>&lt;개요&gt;</b><br>컴퓨터 프로그래밍 원리를 이해한다.<br>
+        예제 중심으로 다양한 프로그래밍 문제와 그 해결 방법을 이해한다.<br>
+        Python를 이해하고, Python 프로그래밍을 통한 문제해결 방법을 익힌다.</dd>
+     </dl>
+     <div style="margin-left:40px">
+      <b>&lt;교재 정보&gt;</b><br>
+      <img src="media/3-1.png" width="180" height="200"><br>
+      <b>으뜸 파이썬:</b> 박동규,강영민 지음/ 출판사: 생능출판/ 출판연도: 2020<br><br>
+      <b>&lt;기타 과목 정보&gt;</b>
+     <ul>
+      <li><b>이수구분:</b> 전공탐색</li>
+      <li><b>담당교수:</b> 김덕봉 교수님</li>
+    </ul>
+  </div><br>
+<hr>
+     <dl>
+      <h2 id="웹"><dt class="blurtext">웹 개발 입문</dt></h2>
+      <dd><b>&lt;개요&gt;</b><br>이 과목은 웹 프로그래밍을 처음 배우는 학생들을 위한 웹 개발 입문 과목으로<br>
+      HTML5, CSS3, 자바스크립트를 배우고 이를 바탕으로 직접 자신의 웹 페이지를 구축해본다.</dd>
+     </dl>
+     <div style="margin-left:40px">
+      <b>&lt;교재 정보&gt;</b><br>
+      <img src="media/3-2.png" width="180" height="200"><br>
+      <b>명품 HTML + CSS3 + Javascript 웹 프로그래밍:</b> 황기태 지음/ 출판사: 생능출판/ 출판연도: 2017<br><br>
+      <b>&lt;기타 과목 정보&gt;</b>
+     <ul>
+      <li><b>이수구분:</b> 전공탐색</li>
+      <li><b>담당교수:</b> 김덕봉 교수님</li>
+     </ul>
+   </div><br>
+<hr>
+     <dl>
+      <h2 id="평통"><dt class="blurtext">평화와 통일</dt></h2>
+      <dd><b>&lt;개요&gt;</b><br>
+       평화의 개념과 실제, 그리고 한반도 분단의 실상과 통일의 의미 학습</dd>
+     </dl>
+     <div style="margin-left:40px">
+      <b>&lt;교재 정보&gt;</b><br>
+      <img src="media/3-3.png" width="180" height="200"><img src="media/3-4.png" width="180" height="200"><img src="media/3-5.png" width="180" height="200"><br>
+      <b>선을 넘어 생각한다:</b> 박한식 강국진 지음/ 출판사: 부키/ 출판연도: 2018 <br>
+      <b>한국 평화학의 탐구:</b> 서보혁 지음/ 출판사: 박영사/ 출판연도: 2019 <br>
+      <b>평화학과 평화운동:</b> 정욱식, 서보혁 지음/ 출판사: 모시는 사람들/ 출판연도:2016<br><br>
+      <b>&lt;기타 과목 정보&gt;</b>
+     <ul>
+      <li><b>이수구분:</b> 전공탐색</li>
+      <li><b>담당교수:</b> 김창진 교수님</li>
+     </ul>
+   </div><br>
+<hr>
+     <dl>
+      <h2 id="노경"><dt class="blurtext">노래로 경험하는 종교</dt></h2>
+      <dd><b>&lt;개요&gt;</b><br>
+       각 종교에서 사용되는 음악을 직접 불러보고 감상하며 종교적인 심성을 경험한다.</dd>
+     </dl>
+     <div style="margin-left:40px">
+      <b>&lt;교재 정보&gt;</b><br>
+      없음<br><br>
+      <b>&lt;기타 과목 정보&gt;</b>
+     <ul>
+      <li><b>이수구분:</b> 교양필수</li>
+      <li><b>담당교수:</b> 차피득 교수님</li>
+     </ul>
+   </div><br>
+<hr>
+     <dl>
+      <h2 id="과에"><dt class="blurtext">과학기술과 에콜로지</dt></h2>
+      <dd><b>&lt;개요&gt;</b><br>
+      본 교과목은 과학기술의 발전이 인간에게 어떤 영향을 끼쳐왔는지 파악하여 인간 삶의 풍요로움과<br>
+      그 이면에 놓인 다양한 의미를 탐구하고자 한다. 나아가 과학기술의 발전이 그동안 지구환경을 얼마나 훼손했는지 파악하고,<br>
+      이를 막기 위한 사회행동을 이해함으로써 인간, 과학, 환경의 상호작용을 탐색하고자 한다.</dd>
+     </dl>
+     <div style="margin-left:40px">
+      <b>&lt;교재 정보&gt;</b><br>
+      없음<br><br>
+      <b>&lt;기타 과목 정보&gt;</b>
+     <ul>
+      <li><b>이수구분:</b> 교양필수</li>
+      <li><b>담당교수:</b> 김명철 교수님</li>
+     </ul>
+   </div><br>
+<hr>
+     <dl>
+      <h2 id="대세"><dt class="blurtext">대학생활세미나2</dt></h2>
+      <dd><b>&lt;개요&gt;</b><br>
+       학부제로 입학한 신입생 적응지도 수업입니다. 대생세 1은 학사지도와 말하기 글쓰기 관련 내용이 중심이었다면,<br>
+       대생세 2는 대학과 대학의 이념, 학문과 공부, 공부와 독서, 전공탐색 등에 대한 내용이 주축을 이루고 있습니다.<br>
+       학생들은 쪽글과 대학 재학중 독서계획을 반드시 발표하고 보고서를 제출해야 합니다.</dd>
+     </dl>
+     <div style="margin-left:40px">
+      <b>&lt;교재 정보&gt;</b><br>
+      없음<br><br>
+      <b>&lt;기타 과목 정보&gt;</b>
+     <ul>
+      <li><b>이수구분:</b> 교양필수</li>
+      <li><b>담당교수:</b> 이하규 교수님</li>
+     </ul>
+   </div><br>
+<hr>
+     <h2 id="교초"><dt class="blurtext">교양중국어 초급</dt></h2>
+     <dl>
+      <dd><b>&lt;개요&gt;</b><br>
+      본 과목은 중국어를 처음 배우고자 하는 학생들을 수강대상으로 하며,<br>
+      중국어의 기초발음 어휘 및 기본적인 표현을 익히고, 말하는 데 목적을 둔다.<br>
+      언어학습과 함께 중국인, 중국사회, 중국문화에 대해 이해를 높인다.
+      </dd>
+     </dl><br>
+     <div style="margin-left:40px">
+      <b>&lt;교재 정보&gt;</b><br>
+      <img src="media/3-6.png" width="180" height="200"><br>
+      <b>신개념 중국어1:</b> 최영화 지음/ 출판사: 다락원/ 출판연도:2016<br><br>
+      <b>&lt;기타 과목 정보&gt;</b>
+     <ul>
+      <li><b>이수구분:</b> 교양선택</li>
+      <li><b>담당교수:</b> 김미란 교수님</li>
+     </ul>
+   </div><br>
+    </article>
+  </section>
+  <script>
+  var span = document.getElementById("span");
+  var timerID = setInterval("doRotate()", 200);
+
+  function doRotate() {
+    var str = span.innerHTML;
+    var firstChar = str.substr(0, 1);
+    var remains = str.substr(1, str.length-1);
+    str = remains + firstChar;
+    span.innerHTML = str;
+  }
+  </script>
+</body>
+</html>

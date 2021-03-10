@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>박손성 home</title>
+  <link href="cssfile.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+  <nav id="menu">
+  <ul class="myMenu">
+      <li style="color:violet"><span id="span">Home  Home  Home  Home </span>
+        <ul class="submenu">
+          <li><a href="home.html" target="_self">&lt;HOME&gt;</a></li>
+        </ul>
+      </li>
+      <li>&lt;본문&gt;
+          <ul class="submenu">
+              <li><a href="목표&시간표.html" target="_self">&lt;학기목표&amp;수업 시간표&gt;</a></li>
+              <li><a href="과목소개.html" target="_self">&lt;수강 과목 소개&gt;</a></li>
+              <li><a href="학습활동.html" target="_self">&lt;나의 슬기로운 자가 학습활동 소개&gt;</a></li>
+              <li><a href="기타활동.html" target="_self">&lt;기타 활동 소개&gt;</a></li>
+          </ul>
+      </li>
+      <li>&lt;맺는말&gt;
+          <ul class="submenu">
+              <li><a href="소감.html" target="_self">&lt;소감&gt;</a></li>
+              <li><a href="배운점.html" target="_self">&lt;배운점&gt;</a></li>
+          </ul>
+      </li>
+      <li>&lt;기능&gt;
+        <ul class="submenu">
+            <li><a href="계산기.html" target="_self">&lt;계산기&gt;</a></li>
+            <li><a href="그림판.html" target="_self">&lt;그림판&gt;</a></li>
+            <li><a href="겜블링.html" target="_self">&lt;겜블링&gt;</a></li>
+        </ul>
+      </li>
+  </ul>
+</nav>
+
+   <header>
+    <h1><span>202014028 박손성 &sum;나의 대학생활</span></h1>
+   </header>
+
+   <section>
+     <form>
+       <fieldset style="margin-left: 80%;margin-top: 5%;position:absolute">
+         <legend>로그인</legend>
+         학번 : <input type="text" value=""><br>
+         암호 : <input type="password" value="">
+         <input type="button" value="완료" onclick="logalert()">
+       </fieldset>
+     </form>
+     <h2 class="droptext">&lt;인사말&gt;</h2>
+
+     <article>
+     <p>
+    <span id="c">2020년 초부터 시작한 코로나가 현재까지 이어지면서 여러 제약과 불안함으로 인해 많이 힘드실것 같습니다.</span><br>
+    <span id="c">하지만 긍정적으로 생각하고 작은 것에서 행복을 찾는다면, 이 어려운 시기는 금방 지나갈 겁니다.</span><br>
+    <span id="c">모두가 힘든 지금 따듯한 마음으로 서로 격려하며 잘 이겨냈으면 좋겠습니다.</span><br>
+    <span id="c">내년 봄에는 코로나가 잠잠해져서 모두 웃는 얼굴로 봤으면 좋겠습니다.</span>
+     </p>
+     </article>
+
+
+   <article>
+    <h2 class="droptext">&lt;자기소개&gt;</h2>
+
+    <p>
+    <span id="c">안녕하십니까? 성공회대학교 IT융합자율학부 1학년 박손성입니다.</span><br>
+    <span id="c">현재 경기도 남양주시에 살고 있으며, 2020년 진접고등학교 자연계열(이과)로 졸업했습니다.</span><br>
+
+    <span id="c">고등학생 때는 우주와 기하를 좋아해서 지구과학과 수학을 재밌게 공부했습니다.</span><br>
+    <span id="c">또한 고등학교 3학년 전까진 누군가를 가르쳐 주는 것이 좋았고, 안정적인 직장을 원해서 초등교사가 꿈이였습니다.</span><br>
+    <span id="c">하지만 3학년으로 올라가고 '정보'라는 과에서 프로그래밍을 배우면서 흥미를 느끼고 꿈을 전향했습니다.</span><br>
+    <br>
+    <span id="c">초등교사를 꿈꾸기 전에도 하고싶은 직업은 여러 번 바뀌었습니다.</span><br>
+    <span id="c">초등학생 때는 사진작가가 되고 싶었고, 더 크면서 장교, 기타리스트, 간호사 등등 어렸을 때부터 다양한 분야의 직업을 꿈꿨습니다.</span><br>
+    <span id="c">저는 꿈이 여러 번 바뀌면서 이 덕분에 다양한 경험을 할 수 있었습니다.</span><br>
+    <br>
+    <span id="c">현재 저는 자격증이 1종보통 밖에 없지만 틈틈이 다른 자격증 공부를 하고 있고,</span><br>
+    <span id="c">저의 관심있는 분야는 웹 페이지와 ios앱에 관심이 있습니다.</span><br>
+    <span id="c">따라서 Java나 swift 언어를 사용하는 개발자가 되고싶습니다.</span><br>
+    </p>
+
+   </article>
+   <script>
+   var span = document.getElementById("span");
+   var timerID = setInterval("doRotate()", 200);
+
+   function doRotate() {
+     var str = span.innerHTML;
+     var firstChar = str.substr(0, 1);
+     var remains = str.substr(1, str.length-1);
+     str = remains + firstChar;
+     span.innerHTML = str;
+   }
+   function logalert(){
+     text="로그인 되었습니다.";
+     alert(text);
+   }
+   </script>
+
+
+</body>
+</html>

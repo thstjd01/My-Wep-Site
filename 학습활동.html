@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head><title>학습 활동</title>
+<link href="cssfile.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+  <nav id="menu">
+  <ul class="myMenu">
+      <li>&lt;HOME&gt;
+        <ul class="submenu">
+          <li><a href="home.html" target="_self">&lt;HOME&gt;</a></li>
+        </ul>
+      </li>
+      <li style="color:violet"><span id="span">본문 본문 본문 본문 </span>
+          <ul class="submenu">
+              <li><a href="목표&시간표.html" target="_self">&lt;학기목표&amp;수업 시간표&gt;</a></li>
+              <li><a href="과목소개.html" target="_self">&lt;수강 과목 소개&gt;</a></li>
+              <li><a href="학습활동.html" target="_self">&lt;나의 슬기로운 자가 학습활동 소개&gt;</a></li>
+              <li><a href="기타활동.html" target="_self">&lt;기타 활동 소개&gt;</a></li>
+          </ul>
+      </li>
+      <li>&lt;맺는말&gt;
+          <ul class="submenu">
+              <li><a href="소감.html" target="_self">&lt;소감&gt;</a></li>
+              <li><a href="배운점.html" target="_self">&lt;배운점&gt;</a></li>
+          </ul>
+      </li>
+      <li>&lt;기능&gt;
+        <ul class="submenu">
+            <li><a href="계산기.html" target="_self">&lt;계산기&gt;</a></li>
+            <li><a href="그림판.html" target="_self">&lt;그림판&gt;</a></li>
+            <li><a href="겜블링.html" target="_self">&lt;겜블링&gt;</a></li>
+        </ul>
+      </li>
+  </ul>
+</nav>
+
+  <header>
+    <h1><span>본문</span></h1>
+  </header>
+
+  <section>
+    <article>
+     <h2 class="droptext">&lt;나의 슬기로운 자가 학습활동 소개&gt;</h2>
+     <p>
+      <span id="c">코로나 사태가 일어나고 난 후 저는 주로 밤 12시에 자고 8시에 일어납니다.</span><br>
+      <span id="c">일어나면 밥을 먹고 씻은 뒤 전날 포스트잇에 계획한 것을 하나씩 끝냅니다.</span><br>
+      <span id="c">해야 할 일이 있으면 놀아도 자꾸 신경 쓰여서, 할 일을 모두 끝내고 노는 편입니다.</span><br>
+      <span id="c">강의는 나오면 바로바로 듣고 바로 복습을 하기 때문에 과제는 강의를 듣고 다음날 합니다.</span><br><br>
+      <span id="c">공부는 책에서 문제가 모두 나온다는 생각으로 책을 많이 읽고,</span><br>
+      <span id="c">책의 남는 공간에 나의 방식대로 정리하거나 나의 생각을 적습니다.</span><br>
+      <span id="c">실습이 있는 과목은 먼저 손에 익힌 뒤 암기하며, 암기할 때는 주로 이면지를 이용해 쓰면서 외웁니다.</span><br>
+      <span id="c">지금 이산수학 수업은 듣지 않지만 '컴퓨팅 사고력을 키우는 이산수학' 책을 사서 따로 공부하고있습니다.</span>
+     </p>
+    </article>
+  </section>
+  <script>
+  var span = document.getElementById("span");
+  var timerID = setInterval("doRotate()", 200);
+
+  function doRotate() {
+    var str = span.innerHTML;
+    var firstChar = str.substr(0, 1);
+    var remains = str.substr(1, str.length-1);
+    str = remains + firstChar;
+    span.innerHTML = str;
+  }
+  </script>
+</body>
+</html>

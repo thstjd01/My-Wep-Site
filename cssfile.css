@@ -1,0 +1,23 @@
+#menu ul{ list-style-type: none; margin:0; padding:0;background: black; }
+ul.myMenu > li {display:inline-block;color: white;text-align: center;padding: 7px 10px;position: relative;width:350px;border:1px solid #86E57F;margin-left: 5px}
+ul.myMenu > li:hover{color:violet}
+ul.myMenu > li a:hover {color: violet}
+ul.myMenu > li ul.submenu { display:none; position:absolute; top:36px; left:0px }
+ul.myMenu > li:hover ul.submenu { display:block; }
+ul.myMenu > li ul.submenu > li { display:inline-block; width:350px; padding:5px 10px; background:black;color:white;text-align:center;border:1px solid #86E57F}
+ul.myMenu > li ul.submenu > li a{color:white}
+ul.myMenu > li ul.submenu > li a:hover { color: violet }
+
+html,body{margin: 0;padding: 0;height: 100%;background:lightsteelblue;}
+header{width: 100%;background: mediumslateblue;color:lightcyan;float: left;}
+h1{text-align: center;font-weight: normal;animation-name: textCA;}
+h2{font-weight:normal;color:aquamarine;text-align: center;}
+h3{text-align: center;}
+p{font-family:Consolas;margin-left: 2em;text-indent:0px;font-weight: bold;}
+@keyframes textCA { 0%{color:lightcyan} 30%{color:palevioletred } 100%{color:black}}
+h1 > span{ animation-name: textCA; animation-duration: 5s;animation-iteration-count: infinite;}
+.blurtext{text-shadow: 5px 5px 10px mediumblue;}
+.droptext{ text-shadow: 2px 2px black}
+#licolor li:hover{background:cyan}
+ul li a{text-decoration: none;}
+#c:hover{color:#CC3D3D}

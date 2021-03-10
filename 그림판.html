@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>그림판</title>
+  <link href="cssfile.css" type="text/css" rel="stylesheet">
+  <style>
+  input[type=button] {
+    width : 70px;
+    height: 30px
+  }
+  </style>
+</head>
+
+<body onload="init()">
+  <nav id="menu">
+  <ul class="myMenu">
+      <li>&lt;HOME&gt;
+        <ul class="submenu">
+          <li><a href="home.html" target="_self">&lt;HOME&gt;</a></li>
+        </ul>
+      </li>
+      <li>&lt;본문&gt;
+          <ul class="submenu">
+              <li><a href="목표&시간표.html" target="_self">&lt;학기목표&amp;수업 시간표&gt;</a></li>
+              <li><a href="과목소개.html" target="_self">&lt;수강 과목 소개&gt;</a></li>
+              <li><a href="학습활동.html" target="_self">&lt;나의 슬기로운 자가 학습활동 소개&gt;</a></li>
+              <li><a href="기타활동.html" target="_self">&lt;기타 활동 소개&gt;</a></li>
+          </ul>
+      </li>
+      <li>&lt;맺는말&gt;
+          <ul class="submenu">
+              <li><a href="소감.html" target="_self">&lt;소감&gt;</a></li>
+              <li><a href="배운점.html" target="_self">&lt;배운점&gt;</a></li>
+          </ul>
+      </li>
+      <li style="color:violet"><span id="span">기능 기능 기능 기능 </span>
+        <ul class="submenu">
+            <li><a href="계산기.html" target="_self">&lt;계산기&gt;</a></li>
+            <li><a href="그림판.html" target="_self">&lt;그림판&gt;</a></li>
+            <li><a href="겜블링.html" target="_self">&lt;겜블링&gt;</a></li>
+        </ul>
+      </li>
+  </ul>
+</nav>
+  <header>
+   <h1><span>그림판</span></h1>
+  </header>
+
+  <canvas id="myCanvas" style="background-color:aliceblue;margin-left:17%;margin-top:10px" width="1000" height="500">
+  </canvas>
+  <br>
+  <span style="margin-left:17%;font-weight:bold;color:#3530C9;font-size:20px">선굵기&nbsp;:&nbsp;</span> <input type="text" size="10" value="2" id="b">&nbsp;<input type="button" id="b" value="적용" onclick="penb()" style="background:#FFCD12">
+  <span style="font-weight:bold;color:#3530C9;margin-left:3%;font-size:20px">색상&nbsp;:&nbsp;</span><input type="color" id="c" value="#000000" onchange="document.body.style.color=this.value">&nbsp;<input type="button" id="c" value="적용" onclick="penc()" style="background:#FFCD12">
+  <span style="font-weight:bold;color:#3530C9;margin-left:3%;font-size:20px">지우개&nbsp;:&nbsp;</span><input type="button" id="cle" value="버튼" onclick="penclear()" style="background:#FFCD12">
+  <span style="font-weight:bold;color:#3530C9;margin-left:3%;font-size:20px">초기화&nbsp;:&nbsp;</span><input type="button" id="allc" value="버튼" onclick="allclear()" style="background:#FFCD12">
+  <script>
+  var canvas, context;
+  function init() {
+  	canvas = document.getElementById("myCanvas");
+  	context = canvas.getContext("2d");
+
+  	context.lineWidth = 2;
+  	context.strokeStyle = "black";
+
+
+  	canvas.addEventListener("mousemove", function (e) { move(e) }, false);
+  	canvas.addEventListener("mousedown", function (e) { down(e) }, false);
+  	canvas.addEventListener("mouseup", function (e) { up(e) }, false);
+  	canvas.addEventListener("mouseout", function (e) { out(e) }, false);
+  }
+
+  var startX=0, startY=0;
+  var drawing=false;
+  function draw(curX, curY) {
+  	context.beginPath();
+  	context.moveTo(startX, startY);
+  	context.lineTo(curX, curY);
+  	context.stroke();
+  }
+  function down(e) {
+  	startX = e.offsetX; startY = e.offsetY;
+  	drawing = true;
+  }
+  function up(e) { drawing = false; }
+  function move(e) {
+  	if(!drawing) return;
+  	var curX = e.offsetX, curY = e.offsetY;
+  	draw(curX, curY);
+  	startX = curX; startY = curY;
+  }
+  function out(e) { drawing = false; }
+
+  var span = document.getElementById("span");
+  var timerID = setInterval("doRotate()", 200);
+
+  function doRotate() {
+    var str = span.innerHTML;
+    var firstChar = str.substr(0, 1);
+    var remains = str.substr(1, str.length-1);
+    str = remains + firstChar;
+    span.innerHTML = str;
+  }
+  function penb(){
+    b = document.getElementById("b");
+    context.lineWidth = b.value;
+
+  }
+  function penc(){
+    context.lineWidth = 2;
+    c=document.getElementById("c");
+    context.strokeStyle=c.value
+  }
+  function penclear(){
+    context.lineWidth=50;
+    context.strokeStyle="aliceblue";
+  }
+  function allclear(){
+    context.clearRect(0,0,canvas.width,canvas.height);
+  }
+  </script>
+</body>
+</html>

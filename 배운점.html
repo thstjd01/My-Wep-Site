@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head><title>배운점</title>
+<link href="cssfile.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+  <nav id="menu">
+  <ul class="myMenu">
+      <li>&lt;HOME&gt;
+        <ul class="submenu">
+          <li><a href="home.html" target="_self">&lt;HOME&gt;</a></li>
+        </ul>
+      </li>
+      <li>&lt;본문&gt;
+          <ul class="submenu">
+              <li><a href="목표&시간표.html" target="_self">&lt;학기목표&amp;수업 시간표&gt;</a></li>
+              <li><a href="과목소개.html" target="_self">&lt;수강 과목 소개&gt;</a></li>
+              <li><a href="학습활동.html" target="_self">&lt;나의 슬기로운 자가 학습활동 소개&gt;</a></li>
+              <li><a href="기타활동.html" target="_self">&lt;기타 활동 소개&gt;</a></li>
+          </ul>
+      </li>
+      <li style="color:violet"><span id="span">맺는말 맺는말 맺는말 맺는말 </span>
+          <ul class="submenu">
+              <li><a href="소감.html" target="_self">&lt;소감&gt;</a></li>
+              <li><a href="배운점.html" target="_self">&lt;배운점&gt;</a></li>
+          </ul>
+      </li>
+      <li>&lt;기능&gt;
+        <ul class="submenu">
+            <li><a href="계산기.html" target="_self">&lt;계산기&gt;</a></li>
+            <li><a href="그림판.html" target="_self">&lt;그림판&gt;</a></li>
+            <li><a href="겜블링.html" target="_self">&lt;겜블링&gt;</a></li>
+        </ul>
+      </li>
+  </ul>
+</nav>
+
+  <header>
+   <h1><span>맺는말</span></h1>
+  </header>
+
+  <aside>
+   <h2 class="droptext">&lt;배운점&gt;</h2>
+   <p>
+    <span id="c">워드로 이미지 삽입, 표 만들기, 글자 크기와 디자인 등을 고려하여 사용해 보면서 여러가지 기능을 배울 수 있는 기회가 되었고,</span><br>
+    <span id="c">웹 페이지 내용을 미리 워드로 내용을 정리하면서 나만의 웹 페이지를 상상함으로써 웹 프로그래밍을 열심히 배우겠다는 자극을 받았습니다.</span><br><br>
+    <span id="c">웹 페이지의 디자인을 위해 css3에 있는 여러가지 색을 찾아보고 페이지에 넣어보면서 다양한 색을 경험해 볼 수 있었고,</span><br>
+    <span id="c">더 많은 기능들을 배워서 웹 페이지를 기술적으로나 미적으로 한층 더 업그레이드 하고 싶다는 생각이 들었습니다.</span><br><br>
+    <span id="c">Javascript에서 c언어와 비슷한 코드, 객체, HTML DOM, document, 이벤트, 캔버스 그래픽 등을 배웠습니다.</span><br>
+    <span id="c">HTML이나 css3 보다 Javascript가 더 어려웠지만 강의를 듣고 연습문제와 나만의 웹페이지 만들기를 통해 Javascript와 친숙해 질 수 있었습니다.</span><br>
+    <span id="c">이번 웹 개발 입문 강의를 통해 웹 프로그래밍에 친숙해 졌고 재미를 느껴, 수업이 종강해도 따로 웹 프로그래밍을 더 깊게 배워보고 싶다고 생각했습니다.</span><br>
+
+   </p>
+  </aside>
+  <script>
+  var span = document.getElementById("span");
+  var timerID = setInterval("doRotate()", 200);
+
+  function doRotate() {
+    var str = span.innerHTML;
+    var firstChar = str.substr(0, 1);
+    var remains = str.substr(1, str.length-1);
+    str = remains + firstChar;
+    span.innerHTML = str;
+  }
+  </script>
+
+</body>
+</html>

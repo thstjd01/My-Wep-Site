@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>겜블링</title>
+  <link href="cssfile.css" type="text/css" rel="stylesheet">
+  <style>
+  input[type=button] {
+    width : 70px;
+    height: 30px
+  }
+  </style>
+</head>
+
+<body onload="init()">
+  <nav id="menu">
+  <ul class="myMenu">
+      <li>&lt;HOME&gt;
+        <ul class="submenu">
+          <li><a href="home.html" target="_self">&lt;HOME&gt;</a></li>
+        </ul>
+      </li>
+      <li>&lt;본문&gt;
+          <ul class="submenu">
+              <li><a href="목표&시간표.html" target="_self">&lt;학기목표&amp;수업 시간표&gt;</a></li>
+              <li><a href="과목소개.html" target="_self">&lt;수강 과목 소개&gt;</a></li>
+              <li><a href="학습활동.html" target="_self">&lt;나의 슬기로운 자가 학습활동 소개&gt;</a></li>
+              <li><a href="기타활동.html" target="_self">&lt;기타 활동 소개&gt;</a></li>
+          </ul>
+      </li>
+      <li>&lt;맺는말&gt;
+          <ul class="submenu">
+              <li><a href="소감.html" target="_self">&lt;소감&gt;</a></li>
+              <li><a href="배운점.html" target="_self">&lt;배운점&gt;</a></li>
+          </ul>
+      </li>
+      <li style="color:violet"><span id="span">기능 기능 기능 기능 </span>
+        <ul class="submenu">
+            <li><a href="계산기.html" target="_self">&lt;계산기&gt;</a></li>
+            <li><a href="그림판.html" target="_self">&lt;그림판&gt;</a></li>
+            <li><a href="겜블링.html" target="_self">&lt;겜블링&gt;</a></li>
+        </ul>
+      </li>
+  </ul>
+</nav>
+  <header>
+   <h1><span>겜블링</span></h1>
+  </header>
+
+  <div style="background:#DAD9FF;width:665px;height:500px;font-size:280px;margin-left:28.6%">
+    <span id="one" onclick="rdint_1()" style="color:#FF7E7E">0</span>
+    <span id="two" onclick="rdint_2()" style="color:#FF2424">0</span>
+    <span id="three" onclick="rdint_3()" style="color:#DB0000">0</span>
+  </div>
+  <form>
+    <input type="button" id="clear" value="Clear" onclick="ag()" style="background:#FF5AFF;width:665px;margin-left:28.6%;margin-top:1%;height:50px;font-size:20px">
+  </form>
+  <div>
+    <span id="t" style="display: inline-block;margin-left:28.6%;width:665px;height: 40px;text-align: center;font-size:25px;border:1px solid; background:#B5B2FF;color:black;margin-top:10px"></span>
+  </div>
+
+  <script>
+  var span = document.getElementById("span");
+  var timerID = setInterval("doRotate()", 200);
+
+  var t = document.getElementById("t");
+
+  function doRotate() {
+    var str = span.innerHTML;
+    var firstChar = str.substr(0, 1);
+    var remains = str.substr(1, str.length-1);
+    str = remains + firstChar;
+    span.innerHTML = str;
+  }
+  function doRotate() {
+    var str = t.innerHTML;
+    var firstChar = str.substr(0, 1);
+    var remains = str.substr(1, str.length-1);
+    str = remains + firstChar;
+    t.innerHTML = str;
+  }
+  function rdint_1(){
+    var num1=document.getElementById("one")
+    var r1= Math.floor(Math.random()*9)+1;
+    num1.innerHTML=r1;
+  }
+  function rdint_2(){
+    var num2=document.getElementById("two")
+    var r2= Math.floor(Math.random()*9)+1;
+    num2.innerHTML=r2;
+  }
+  function rdint_3(){
+    var num1=document.getElementById("one")
+    var num2=document.getElementById("two")
+    var num3=document.getElementById("three")
+    var r3=Math.floor(Math.random()*9)+1;
+    num3.innerHTML=r3;
+    if ((num1.innerHTML==num3.innerHTML)&&(num3.innerHTML==num2.innerHTML)){
+      t=document.getElementById("t")
+      t.innerHTML=" 성공!! 성공!! 성공!! 성공!! 성공!! 성공!! 성공!! 성공!! "
+    }
+    else{
+      t=document.getElementById("t")
+      t.innerHTML=" 실패ㅠㅠ 실패ㅠㅠ 실패ㅠㅠ 실패ㅠㅠ 실패ㅠㅠ "
+    }
+  }
+  function ag(){
+    document.getElementById("t").innerHTML="";
+    document.getElementById("one").innerHTML=0;
+    document.getElementById("two").innerHTML=0;
+    document.getElementById("three").innerHTML=0;
+
+  }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head><title>소감</title>
+<link href="cssfile.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+  <nav id="menu">
+  <ul class="myMenu">
+      <li>&lt;HOME&gt;
+        <ul class="submenu">
+          <li><a href="home.html" target="_self">&lt;HOME&gt;</a></li>
+        </ul>
+      </li>
+      <li>&lt;본문&gt;
+          <ul class="submenu">
+              <li><a href="목표&시간표.html" target="_self">&lt;학기목표&amp;수업 시간표&gt;</a></li>
+              <li><a href="과목소개.html" target="_self">&lt;수강 과목 소개&gt;</a></li>
+              <li><a href="학습활동.html" target="_self">&lt;나의 슬기로운 자가 학습활동 소개&gt;</a></li>
+              <li><a href="기타활동.html" target="_self">&lt;기타 활동 소개&gt;</a></li>
+          </ul>
+      </li>
+      <li style="color:violet"><span id="span">맺는말 맺는말 맺는말 맺는말 </span>
+          <ul class="submenu">
+              <li><a href="소감.html" target="_self">&lt;소감&gt;</a></li>
+              <li><a href="배운점.html" target="_self">&lt;배운점&gt;</a></li>
+          </ul>
+      </li>
+      <li>&lt;기능&gt;
+        <ul class="submenu">
+            <li><a href="계산기.html" target="_self">&lt;계산기&gt;</a></li>
+            <li><a href="그림판.html" target="_self">&lt;그림판&gt;</a></li>
+            <li><a href="겜블링.html" target="_self">&lt;겜블링&gt;</a></li>
+        </ul>
+      </li>
+  </ul>
+</nav>
+  <header>
+   <h1><span>맺는말</span></h1>
+  </header>
+
+  <aside>
+   <h2 class="droptext">&lt;과제 마무리 소감&gt;</h2>
+   <p>
+    <span id="c">이 과제를 통해 자신을 되돌아보고 2학기 목표를 세울 수 있어서, 과제를 하면서 힘들지 않고 집중해서 할 수 있었습니다.</span><br>
+    <span id="c">특히 자기소개와 나의 슬기로운 자가 학습활동 소개를 통해 나를 다시 한번 되돌아보고,</span><br>
+    <span id="c">학기 목표와 수업시간표, 수강 과목 소개를 통해 2학기의 목표와 어떻게 공부를 해 나아가야 할지 계획할 수 있어서 뜻 깊은 시간이었습니다.</span><br><br>
+    <span id="c">워드로 작성한 나의 대학생활을 바탕으로 html과 css3로 웹페이지를 구현함으로써 실습과 다양한 기능을 연습할 수 있는 기회가 되었습니다.</span><br>
+    <span id="c">자신에 대한 대학생활을 소개하는 웹 페이지를 직접 만들고 누군가에게 소개 해 줌으로써 재미있고 뜻 깊은 시간이었습니다.</span><br><br>
+    <span id="c">14주차의 11단원 HTML5 캔버스 그래픽까지 배우고 이를 바탕으로 자신만의 웹 페이지를 만들면서 완성된 페이지를 보고 성취감과 뿌듯함을 느꼈습니다. </span><br>
+    <span id="c">비록 COVID-19로 인해 한 학기 동안 비대면으로 수업을 들었지만 웹 개발 입문 강의를 통해 부족함 없이 공부했습니다.</span><br>
+    <span id="c">다음 2021년에는 코로나의 유행이 끝나고 학교에 갈 수 있기를 기원하며, 한 학기 동안 강의 잘 들었습니다. 감사합니다.</span>
+   </p>
+  </aside>
+  <script>
+  var span = document.getElementById("span");
+  var timerID = setInterval("doRotate()", 200);
+
+  function doRotate() {
+    var str = span.innerHTML;
+    var firstChar = str.substr(0, 1);
+    var remains = str.substr(1, str.length-1);
+    str = remains + firstChar;
+    span.innerHTML = str;
+  }
+  </script>
+
+</body>
+</html>

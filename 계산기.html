@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>계산기</title>
+  <link href="cssfile.css" type="text/css" rel="stylesheet">
+  <script>
+    function backward() {
+      var exp = document.getElementById("exp");
+      var len = exp.value.length;
+      if(len == 0)
+        return;
+      else
+        exp.value = exp.value.substr(0, len-1);
+    }
+
+    function clearexp() {
+      var exp = document.getElementById("exp");
+      exp.value = "0";
+    }
+
+    function addInput(value) {
+      var exp = document.getElementById("exp");
+      if(exp.value == "0")
+        exp.value = value;
+      else
+        exp.value += value;
+    }
+
+    function calulate() {
+      var exp = document.getElementById("exp");
+      exp.value = eval(exp.value);
+    }
+
+    function factorial(){
+      var exp = document.getElementById("exp");
+      var fact=1;
+      for(var i=1;i<=exp.value;i++)
+      {
+        fact*=i;
+      }
+      exp.value=fact;
+    }
+    function sigma(){
+      var exp = document.getElementById("exp");
+      var s=0;
+      for(var i=1;i<=exp.value;i++)
+      {
+        s+=i
+      }
+      exp.value=s
+    }
+    function rdint(){
+      return Math.floor(Math.random()*1000)+1;
+    }
+    function plusprob(e){
+      q=rdint()+"+"+rdint();
+      u=prompt(q+"은 얼마입니까?",0);
+      if(u==null){
+        alert("계산 연습을 종료합니다.");
+      }
+      else{
+        a=eval(q);
+        if(a==u){
+          alert("정답입니다!");
+        }
+        else{
+          alert("틀렸습니다! 답은"+a);
+        }
+      }
+    }
+    function minusprob(e){
+      q=rdint()+"-"+rdint();
+      u=prompt(q+"은 얼마입니까?",0);
+      if(u==null){
+        alert("계산 연습을 종료합니다.");
+      }
+      else{
+        a=eval(q);
+        if(a==u){
+          alert("정답입니다!");
+        }
+        else{
+          alert("틀렸습니다! 답은"+a);
+        }
+      }
+    }
+    function mulprob(e){
+      q=rdint()+"*"+rdint();
+      u=prompt(q+"은 얼마입니까?",0);
+      if(u==null){
+        alert("계산 연습을 종료합니다.");
+      }
+      else{
+        a=eval(q);
+        if(a==u){
+          alert("정답입니다!");
+        }
+        else{
+          alert("틀렸습니다! 답은"+a);
+        }
+      }
+    }
+    function divprob(e){
+      q=rdint()+"/"+rdint();
+      u=prompt(q+"은 얼마입니까?(몫만 구하세요)",0);
+      if(u==null){
+        alert("계산 연습을 종료합니다.");
+      }
+      else{
+        a=parseInt(eval(q));
+        if(a==u){
+          alert("정답입니다!");
+        }
+        else{
+          alert("틀렸습니다! 답은"+a);
+        }
+      }
+    }
+  </script>
+  <style>
+		tr {
+			text-align : center;
+		}
+		td {
+			width : 80px;
+      height: 50px;
+		}
+		input[type=button] {
+			width : 70px;
+      height: 30px
+		}
+    button[type=button]{
+      width: 70px;
+      height: 30px;
+    }
+    td,th{
+      border:2px solid black;
+      background:lightgreen
+    }
+    tbody input:hover{
+      background:pink
+    }
+	</style>
+</head>
+
+<body>
+  <nav id="menu">
+  <ul class="myMenu">
+      <li>&lt;HOME&gt;
+        <ul class="submenu">
+          <li><a href="home.html" target="_self">&lt;HOME&gt;</a></li>
+        </ul>
+      </li>
+      <li>&lt;본문&gt;
+          <ul class="submenu">
+              <li><a href="목표&시간표.html" target="_self">&lt;학기목표&amp;수업 시간표&gt;</a></li>
+              <li><a href="과목소개.html" target="_self">&lt;수강 과목 소개&gt;</a></li>
+              <li><a href="학습활동.html" target="_self">&lt;나의 슬기로운 자가 학습활동 소개&gt;</a></li>
+              <li><a href="기타활동.html" target="_self">&lt;기타 활동 소개&gt;</a></li>
+          </ul>
+      </li>
+      <li>&lt;맺는말&gt;
+          <ul class="submenu">
+              <li><a href="소감.html" target="_self">&lt;소감&gt;</a></li>
+              <li><a href="배운점.html" target="_self">&lt;배운점&gt;</a></li>
+          </ul>
+      </li>
+      <li style="color:violet"><span id="span">기능 기능 기능 기능 </span>
+        <ul class="submenu">
+            <li><a href="계산기.html" target="_self">&lt;계산기&gt;</a></li>
+            <li><a href="그림판.html" target="_self">&lt;그림판&gt;</a></li>
+            <li><a href="겜블링.html" target="_self">&lt;겜블링&gt;</a></li>
+        </ul>
+      </li>
+  </ul>
+</nav>
+  <header>
+   <h1><span>계산기</span></h1>
+  </header>
+
+  <form>
+		<table style="margin-left:38%;margin-top:8%;border-collapse:collapse;">
+      <thead>
+			<tr>
+				<td colspan="4"><input type="text" id="exp" value="0" size="50" style="height:25px;"></td>
+			</tr>
+    </thead>
+      <tbody>
+			<tr>
+				<td><input type="button" id="ce" value="CE" onclick="clearexp()" style="background:#FFCD12"></td>
+				<td><input type="button" id="c" value="C" onclick="clearexp()" style="background:#FFCD12"></td>
+        <td><input type="button" id="back" value="BACK" onclick="backward()" style="background:#FFCD12"></td>
+        <td><input type="button" id="equal" value="=" onclick="calulate()" style="background:#FFCD12"></td>
+			</tr>
+      <tr>
+        <td><input type="button" id="bge" value=">=" onclick="addInput(this.value)" style="background:#C7C4FF"></td>
+        <td><input type="button" id="sme" value="<=" onclick="addInput(this.value)" style="background:#C7C4FF"></td>
+        <td><input type="button" id="bg" value=">" onclick="addInput(this.value)" style="background:#C7C4FF"></td>
+        <td><input type="button" id="sm" value="<" onclick="addInput(this.value)" style="background:#C7C4FF"></td>
+      </tr>
+      <tr>
+        <td><button type="button" id="sq" value="**2" onclick="addInput(this.value)" style="background:#C7C4FF">x^2</button></td>
+        <td><button type="button" id="root" value="**0.5" onclick="addInput(this.value)" style="background:#C7C4FF">√x</button></td>
+        <td><button type="button" id="fact" value="!" onclick="factorial(this.value)" style="background:#C7C4FF">x!</button></td>
+        <td><button type="button" id="sig" value="sigma" onclick="sigma(this.value)" style="background:#C7C4FF">∑</button></td>
+      </tr>
+			<tr>
+				<td><input type="button" id="seven" value="7" onclick="addInput(this.value)"></td>
+				<td><input type="button" id="eight" value="8" onclick="addInput(this.value)"></td>
+				<td><input type="button" id="nine" value="9" onclick="addInput(this.value)"></td>
+        <td><input type="button" id="rest" value="%" onclick="addInput(this.value)" style="background:#C7C4FF"></td>
+			</tr>
+			<tr>
+				<td><input type="button" id="four" value="4" onclick="addInput(this.value)"></td>
+				<td><input type="button" id="five" value="5" onclick="addInput(this.value)"></td>
+				<td><input type="button" id="six" value="6" onclick="addInput(this.value)"></td>
+        <td><input type="button" id="div" value="/" onclick="addInput(this.value)" style="background:#C7C4FF"></td>
+			</tr>
+			<tr>
+				<td><input type="button" id="one" value="1" onclick="addInput(this.value)"></td>
+				<td><input type="button" id="two" value="2" onclick="addInput(this.value)"></td>
+				<td><input type="button" id="three" value="3" onclick="addInput(this.value)"></td>
+	  	  <td><input type="button" id="mul" value="*" onclick="addInput(this.value)" style="background:#C7C4FF"></td>
+			</tr>
+			<tr>
+        <td><input type="button" id="plus" value="+" onclick="addInput(this.value)" style="background:#C7C4FF"></td>
+        <td><input type="button" id="zero" value="0" onclick="addInput(this.value)" ></td>
+        <td><input type="button" id="point" value="." onclick="addInput(this.value)" style="background:#C7C4FF"></td>
+        <td><input type="button" id="minus" value="-" onclick="addInput(this.value)" style="background:#C7C4FF"></td>
+			</tr>
+    </tbody>
+		</table>
+	</form>
+  <div>
+  <button onclick="plusprob(event)" style="width:364px;height:60px;font-size:25px;margin-top:20px;margin-left:11px;background:#000000;color:white">덧셈 게임(클릭하세요)!</button>
+  <button onclick="minusprob(event)" style="width:364px;height:60px;font-size:25px;margin-top:20px;margin-left:11px;background:#000000;color:white">뺄셈 게임(클릭하세요)!</button>
+  <button onclick="mulprob(event)" style="width:364px;height:60px;font-size:25px;margin-top:20px;margin-left:11px;background:#000000;color:white">곱셈 게임(클릭하세요)!</button>
+  <button onclick="divprob(event)" style="width:364px;height:60px;font-size:25px;margin-top:20px;margin-left:11px;background:#000000;color:white">나눗셈 게임(클릭하세요)!</button>
+  </div>
+  <script>
+  var span = document.getElementById("span");
+  var timerID = setInterval("doRotate()", 200);
+
+  function doRotate() {
+    var str = span.innerHTML;
+    var firstChar = str.substr(0, 1);
+    var remains = str.substr(1, str.length-1);
+    str = remains + firstChar;
+    span.innerHTML = str;
+  }
+  </script>
+</body>
+</html>
